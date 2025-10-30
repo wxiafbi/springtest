@@ -31,6 +31,12 @@
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+		<!-- MQTT 依赖 -->
+		<dependency>
+			<groupId>org.eclipse.paho</groupId>
+			<artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+			<version>1.2.5</version>
+		</dependency>
 		<!-- mybaits起步依赖 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
