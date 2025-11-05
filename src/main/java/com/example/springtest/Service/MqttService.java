@@ -42,11 +42,12 @@ public class MqttService {
             logger.info("Initializing MQTT client with broker: {}, clientId: {}", brokerUrl, clientId);
             mqttClient = new MqttClient(brokerUrl, clientId);
             MqttConnectOptions options = new MqttConnectOptions();
+            System.out.println("username:" + username +"\r\n"+ "password:" + password.toString());
             options.setUserName(username);
             options.setPassword(password.toCharArray());
-            options.setAutomaticReconnect(true);
-            options.setCleanSession(true);
-            options.setConnectionTimeout(10);
+            // options.setAutomaticReconnect(true);
+            // options.setCleanSession(true);
+            // options.setConnectionTimeout(10);
 
             mqttClient.connect(options);
             mqttClient.subscribe("#", (topic, message) -> {
